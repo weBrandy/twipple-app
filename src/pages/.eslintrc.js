@@ -3,6 +3,11 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
+    "extends": ["plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error"
+    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
