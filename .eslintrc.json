@@ -1,6 +1,6 @@
-module.exports = {
-  extends: ['next', 'next/core-web-vitals', 'plugin:prettier/recommended'],
-  rules: {
+{
+  "extends": ["next", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "rules": {
     // Additional rules or overrides can be added here
   },
-};
+}

@@ -8,12 +8,14 @@ export default async function generateTweetsHandler(req, res) {
 
   try {
     // Fetch the user input from the request body
-    const { contentPillars, engagementType, targetAudience, sentiment, length, complexity } = req.body;
+    const { contentPillars, characterOfContent, targetAudience, sentiment, 
+    length, complexity } = req.body;
 
-    // Further processing here...
-    
-  } catch (err) {
-    // Handle error here...
-    res.status(500).json({ error: err.message });
+    // Put your code to generate tweets here
+
+  } catch (error) {
+    // handle the error here
+    console.error(error);
+    res.status(500).json({ error: 'An error occurred while generating tweets' });
   }
 }
