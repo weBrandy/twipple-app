@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import ContentPillars from './ContentPillars';
 import EngagementType from './EngagementType';
 import TargetAudience from './TargetAudience';
@@ -25,19 +25,18 @@ export default function TweetGeneratorForm() {
     setIsLoggedIn(true);
   };
 
-// Pillars change handler
-const handlePillarsChange = (index, event) => {
+  const handlePillarsChange = (index, event) => {
     const newPillars = [...pillars];
-    newPillars[index].mainPillar = event.target.value;
+    newPillars[index] = event.target.value;
     setPillars(newPillars);
   };
 
   const handleEngagementTypeChange = (index) => {
-    const newEngagementType = [...EngagementType];
+    const newEngagementType = [...engagementType];
     newEngagementType[index] = !newEngagementType[index];
     setEngagementType(newEngagementType);
   };
-  
+
   const handleSentimentChange = (index) => {
     const newSentiment = [...sentiment];
     newSentiment[index] = !newSentiment[index];
@@ -47,19 +46,19 @@ const handlePillarsChange = (index, event) => {
   const handleTargetAudienceChange = (event) => {
     setTargetAudience(event.target.value);
   };
-  
+
   const handleLengthChange = (event) => {
     setLength(event.target.value);
   };
-  
+
   const handleComplexityChange = (event) => {
     setComplexity(event.target.value);
   };
-  
+
   const setGeneratedTweet = (generatedTweet) => {
     setTweet(generatedTweet);
   };
-  
+
   const handleButtonsClick = (buttonType) => {
     switch (buttonType) {
       case 'copyTweet':
